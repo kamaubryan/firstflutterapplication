@@ -56,12 +56,14 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="343dp"
+        android:layout_height="41dp"
+        android:background="@drawable/emailbackground"
         android:ems="10"
         android:hint="Email"
+        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
-        android:padding="13dp"
+        android:padding="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
@@ -70,17 +72,38 @@
         app:layout_constraintVertical_bias="0.5"
         app:startIconDrawable="@drawable/password_svgrepo_com"
         app:startIconScaleType="fitStart"
+        app:startIconPadding="16dp"
+        app:boxPaddingStart="16dp"
+        android:paddingStart="16dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@android:color/transparent"
+        app:startIconTint="@color/black"
         >
-
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/emailEditText"
+            android:inputType="textEmailAddress"
+            >
+        </com.google.android.material.textfield.TextInputEditText>
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
+        android:layout_width="341dp"
+        android:layout_height="41dp"
+        android:background="@drawable/passwordbackground"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="401dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.google.android.material.textfield.TextInputEditText>
 </androidx.constraintlayout.widget.ConstraintLayout>

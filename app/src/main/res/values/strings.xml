@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">firstApplication</string>
     <string name="binance">Binance</string>
+    <string name="password">Password</string>
 </resources>
