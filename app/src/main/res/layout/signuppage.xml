@@ -61,33 +61,37 @@
         android:background="@drawable/emailbackground"
         android:ems="10"
         android:hint="Email"
-        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
         android:padding="3dp"
+        android:paddingStart="16dp"
+        android:textColorHint="@color/black"
+        app:boxPaddingStart="16dp"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        app:startIconDrawable="@drawable/password_svgrepo_com"
-        app:startIconScaleType="fitStart"
+        app:startIconDrawable="@drawable/email8svgrepocom"
         app:startIconPadding="16dp"
-        app:boxPaddingStart="16dp"
-        android:paddingStart="16dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@android:color/transparent"
-        app:startIconTint="@color/black"
-        >
+        app:startIconScaleType="fitStart"
+        app:startIconTint="@color/black">
+
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/emailEditText"
-            android:inputType="textEmailAddress"
-            >
-        </com.google.android.material.textfield.TextInputEditText>
+            android:layout_height="match_parent">
 
+        </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textEmailAddress"></com.google.android.material.textfield.TextInputEditText>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextTextPassword"
@@ -97,13 +101,82 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:textColorHint="@color/black"
+        app:boxPaddingStart="16dp"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="5dp"
+        app:startIconDrawable="@drawable/password_svgrepo_com"
+        app:startIconPadding="15dp"
+        app:startIconScaleType="fitStart"
+        app:startIconTint="@color/black"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="401dp" />
+        tools:layout_editor_absoluteY="401dp"
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        />
 
-    </com.google.android.material.textfield.TextInputEditText>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ibmplexsans"
+        android:text="Forgot password?"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="457dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:background="@drawable/getstarted"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="508dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="216dp"
+        android:layout_height="28dp"
+        android:text="Or sign in with"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="59dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/google"
+        tools:layout_editor_absoluteY="660dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="61dp"
+        android:layout_height="39dp"
+        app:srcCompat="@drawable/fb"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="660dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="91dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/apple"
+        tools:layout_editor_absoluteX="266dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
