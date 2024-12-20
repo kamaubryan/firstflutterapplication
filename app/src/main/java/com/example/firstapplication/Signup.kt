@@ -4,60 +4,42 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class Signup : AppCompatActivity(){
+class SignUpActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.signuppage)
+
+        // Find views by their IDs
         val email: EditText = findViewById(R.id.editTextTextEmailAddress2)
         val password: EditText = findViewById(R.id.editTextTextPassword)
         val signupButton: Button = findViewById(R.id.button3)
 
-        signupButton.setOnClickListener{
+        // Set click listener for the signup button
+        signupButton.setOnClickListener {
             val emailText = email.text.toString().trim()
             val passwordText = password.text.toString().trim()
 
-
-             if (!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()){
+            // Perform email validation
+            if (emailText.isBlank()) {
+                email.error = "Email is required"
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()) {
                 email.error = "Invalid email address"
-            }else if (passwordText.isBlank()) {
+            }
+            // Perform password validation
+            else if (passwordText.isBlank()) {
                 password.error = "Password is required"
-            }}
-
+            } else if (passwordText.length < 6) {
+                password.error = "Password must be at least 6 characters"
+            }
+            // Successful validation
+            else {
+                Toast.makeText(this, "Sign Up Successful!", Toast.LENGTH_SHORT).show()
+                // Navigate to the next screen or perform further actions
+            }
+        }
     }
 }
-//package com.example.userprofileapp
-//
-//import android.content.Intent
-//import android.os.Bundle
-//import android.util.Patterns
-//import android.widget.Button
-//import android.widget.EditText
-//import androidx.appcompat.app.AppCompatActivity
-//
-//class SignUpActivity : AppCompatActivity(){
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_signup)
-//        val username: EditText = findViewById(R.id.editTextText)
-//        val email: EditText = findViewById(R.id.editTextTextEmailAddress)
-//        val password: EditText = findViewById(R.id.editTextTextPassword2)
-//        val signupButton: Button = findViewById(R.id.button3)
-//
-//        signupButton.setOnClickListener{
-//            val nameText = username.text.toString().trim()
-//            val emailText = email.text.toString().trim()
-//            val passwordText = password.text.toString().trim()
-//
-//            if (nameText.isBlank()){
-//                username.error  = "Username is required"
-//            }else if (!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()){
-//                email.error = "Invalid email address"
-//            }else if (passwordText.isBlank()) {
-//                password.error = "Password is required"
-//            }}
-//    }
-//}//}
