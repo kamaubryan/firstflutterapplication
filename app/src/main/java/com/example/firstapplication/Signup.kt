@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputLayout
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -21,7 +22,9 @@ class SignUpActivity : AppCompatActivity() {
         // Set click listener for the signup button
         signupButton.setOnClickListener {
             val emailText = email.text.toString().trim()
+//            val emailText = email.editText?.text.toString().trim()
             val passwordText = password.text.toString().trim()
+//            val passwordText = password.editText?.text.toString().trim()
 
             // Perform email validation
             if (emailText.isBlank()) {

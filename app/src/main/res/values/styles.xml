@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.FirstApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize colors for Material3 -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Optional: Customize other aspects like text appearance, icon colors -->
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>
